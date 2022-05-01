@@ -45,7 +45,8 @@ construct_tree(tree, 80, 5, 15)
 
 #The Turtle Object should hold within it all the pathing (The graph of the tree). 
 #Mainloop sequentially draws it out
-tree.update()
+
 tree.mainloop()
+tree.update()
 #Stops the console from closing 
 input("Press Any Key To End The Program")
