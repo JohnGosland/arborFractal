@@ -33,15 +33,17 @@ def construct_tree(turtle, current_branch_length, shorting_length, angle_from_pa
 #Initialize Turtle 
 tree = turtle.Turtle()
 tree.speed(speed = 0)
-tree.hideturtle()
 tree.setheading(90)
-tree.color('orange')
+tree.pencolor('orange')
+
+#Turtle is Down and Drawing
+tree.pendown()
 
 #Inital Function Call
 construct_tree(tree, 80, 5, 15)
 
 #The Turtle Object should hold within it all the pathing (The graph of the tree). 
 #Mainloop sequentially draws it out
-
+tree.mainloop()
 #Stops the console from closing 
 input("Press Any Key To End The Program")
