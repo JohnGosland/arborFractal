@@ -1,7 +1,5 @@
 import turtle
 MIN_BRANCH_LENGTH = 1
-
-
 #Recrusive drawing function. Does most of the work. 
 def construct_tree(turtle, current_branch_length, shorting_length, angle_from_parent):
     #Base Case ----------------------------------
@@ -28,27 +26,33 @@ def construct_tree(turtle, current_branch_length, shorting_length, angle_from_pa
         turtle.backward(current_branch_length)
             #This (out of expediance) redraws over itself to get back to the inital position
 
-
-
 #Initialize Turtle 
 screen = turtle.Screen()
 turtle.speed(speed = 0)
-turtle.setheading(90)
-turtle.pencolor('orange')
 
 #Starts the inital position for the Turtle
 #This also disables screen refreshing until turtle.update is called
 #greatly improving performance.
 turtle.tracer(0,0)
 
-#Turtle is Down and Drawing
-turtle.pendown()
+for x in range(4):
 
-#Inital Function Call
-construct_tree(turtle, 50, 5, 15)
+    #Set Tree Color Per Interation
+    if x == 1 or x== 3:
+        turtle.pencolor('orange')
+    else:
+        turtle.pencolor('black')
+    #Rotate Starting position of fractal
+    turtle.setheading(90 + x * 90)
+    
+    #Construct Fractal
+    turtle.pendown()
+    construct_tree(turtle, 50, 3, 15)
+    turtle.penup()
+    turtle.setpos(0,0)
 
-#The Turtle Object should hold within it all the pathing (The graph of the tree). 
-#
+#The turtle object holds within it the pathing of the sum of all the fractals.
+turtle.hideturtle()
 turtle.update()
 
 #Stops the console from closing 
