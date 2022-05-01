@@ -38,27 +38,29 @@ int main() {
     turtle1->fillcolor({ "orange" });
     turtle1->pencolor({ "orange" });
     
-    Turtle* turtle2 = new Turtle(screenObj);
-    turtle2->speed(0);
-    turtle2->fillcolor({ "orange" });
+    //Turtle* turtle2 = new Turtle(screenObj);
+    //turtle2->speed(0);
+    //turtle2->fillcolor({ "orange" });
 
-    Turtle* turtle3 = new Turtle(screenObj);
-    turtle3->speed(0);
-    turtle3->fillcolor({ "black" });
-    turtle3->pencolor({ "orange" });
-
-    turtle1->begin_fill(); 
-    turtle2->begin_fill();
-    turtle3->begin_fill();
+    //Turtle* turtle3 = new Turtle(screenObj);
+    //turtle3->speed(0);
+    //turtle3->fillcolor({ "black" });
+    //turtle3->pencolor({ "orange" });
+   
     
+    turtle1->begin_fill(); 
+    //turtle2->begin_fill();
+    //turtle3->begin_fill();
+
+
     turtle1->setheading(90);
-    turtle2->setheading(0);
-    turtle3->setheading(180);
+    //turtle2->setheading(0);
+    //turtle3->setheading(180);
     
     //Turtle is engaged
     {
         
-        construct_tree(turtle1, 40, 4, 188);
+        construct_tree(turtle1, 50, 5, 30);
         //construct_tree(turtle2, 40, 2, 30);
         //construct_tree(turtle3, 100, 5, 90);
         
@@ -66,8 +68,8 @@ int main() {
 
     //Stop drawing and deconstruct the screen object after user input.
     turtle1->end_fill();
-    turtle2->end_fill();
-    turtle3->end_fill();
+    //turtle2->end_fill();
+    //turtle3->end_fill();
 
     cout << "Press Enter To End The Program";
     getchar();
