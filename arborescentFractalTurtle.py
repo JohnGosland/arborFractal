@@ -45,7 +45,7 @@ turtle.tracer(0,0)
 turtle.pendown()
 
 #Inital Function Call
-construct_tree(turtle, 80, 5, 15)
+construct_tree(turtle, 50, 5, 15)
 
 #The Turtle Object should hold within it all the pathing (The graph of the tree). 
 #
