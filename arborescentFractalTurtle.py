@@ -31,22 +31,25 @@ def construct_tree(turtle, current_branch_length, shorting_length, angle_from_pa
 
 
 #Initialize Turtle 
-tree = turtle.Turtle()
-tree.speed(speed = 0)
-tree.setheading(90)
-tree.pencolor('orange')
-tree.tracer(0,0)
+screen = turtle.Screen()
+turtle.speed(speed = 0)
+turtle.setheading(90)
+turtle.pencolor('orange')
+
+#Starts the inital position for the Turtle
+#This also disables screen refreshing until turtle.update is called
+#greatly improving performance.
+turtle.tracer(0,0)
 
 #Turtle is Down and Drawing
-tree.penup()
+turtle.pendown()
 
 #Inital Function Call
-construct_tree(tree, 80, 5, 15)
+construct_tree(turtle, 80, 5, 15)
 
 #The Turtle Object should hold within it all the pathing (The graph of the tree). 
-#Mainloop sequentially draws it out
+#
+turtle.update()
 
-tree.mainloop()
-tree.update()
 #Stops the console from closing 
 input("Press Any Key To End The Program")
