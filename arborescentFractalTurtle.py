@@ -35,22 +35,38 @@ turtle.speed(speed = 0)
 #greatly improving performance.
 turtle.tracer(0,0)
 
-for x in range(4):
-
-    #Set Tree Color Per Interation
-    if x == 1 or x== 3:
-        turtle.pencolor('orange')
-    else:
-        turtle.pencolor('black')
-    #Rotate Starting position of fractal
-    turtle.setheading(90 + x * 90)
+for y in range(2):
+        if y == 1:
+            for x in range(4):
+                #Set Tree Color Per Interation
+                if x == 1 or x== 3:
+                    turtle.pencolor('orange')
+                else:
+                    turtle.pencolor('black')
+                #Rotate Starting position of fractal
+                turtle.setheading(90 + x * 90)
     
-    #Construct Fractal
-    turtle.pendown()
-    construct_tree(turtle, 50, 3, 15)
-    turtle.penup()
-    turtle.setpos(0,0)
+                #Construct Fractal
+                turtle.pendown()
+                construct_tree(turtle, 50, 3, 15)
+                turtle.penup()
+                turtle.setpos(0,0)
 
+        else:
+            for x in range(4):
+                #Set Tree Color Per Interation
+                if x == 1 or x== 3:
+                    turtle.pencolor('orange')
+                else:
+                    turtle.pencolor('black')
+                #Rotate Starting position of fractal
+                turtle.setheading(45 + x * 90)
+    
+                #Construct Fractal
+                turtle.pendown()
+                construct_tree(turtle, 20, 2, 15)
+                turtle.penup()
+                turtle.setpos(0,0)
 #The turtle object holds within it the pathing of the sum of all the fractals.
 turtle.hideturtle()
 turtle.update()
