@@ -27,14 +27,19 @@ def construct_tree(turtle, current_branch_length, shorting_length, angle_from_pa
             # results in being at your inital starting position
         turtle.backward(current_branch_length)
             #This (out of expediance) redraws over itself to get back to the inital position
+        
+        #Hide the Cursor Render default on turtle objects
+        turtle.hideturtle()
 
 
 
 #Initialize Turtle 
 screen = turtle.Screen()
+screen.bgcolor('black')
 turtle.speed(speed = 0)
 turtle.setheading(90)
 turtle.pencolor('orange')
+
 
 #Starts the inital position for the Turtle
 #This also disables screen refreshing until turtle.update is called
@@ -51,5 +56,6 @@ construct_tree(turtle, 50, 5, 15)
 #
 turtle.update()
 
-#Stops the console from closing 
+
+#Stops the console from closing
 input("Press Any Key To End The Program")
