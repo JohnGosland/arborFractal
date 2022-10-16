@@ -1,5 +1,5 @@
 import turtle
-MIN_BRANCH_LENGTH = .25
+MIN_BRANCH_LENGTH = 1
 
 
 #Recrusive drawing function. Does most of the work. 
@@ -51,9 +51,40 @@ turtle.pendown()
 
 #Inital Function Call - Fractal Itself
 
+#Larger Macro Fractal
 for i in range(4):
     turtle.setheading(90 * (90+i))
-    construct_tree(turtle, 63, 2, 17)
+    if i % 2 != 0:
+            turtle.color('orange')
+    else:
+        turtle.color('purple')   
+    construct_tree(turtle, 56, 3.9, 20)
+
+
+
+#Wonkie Fractal
+for j in range(4):
+    turtle.setheading(0 + (j*90))
+    #Wonkie Fractal
+    for i in range(4):
+        turtle.setheading((45+j) + (45+i))
+        if i % 2 != 0:
+                turtle.color('orange')
+        else:
+            turtle.color('purple')   
+        construct_tree(turtle, 39, 5, 30)
+
+#Wonkie Fractal
+for j in range(4):
+    #turtle.setheading(90 + (j*90))
+    #Wonkie Fractal
+    for i in range(4):
+        turtle.setheading((45+j) + (45+i))
+        if i % 2 != 0:
+                turtle.color('orange')
+        else:
+            turtle.color('purple')   
+        construct_tree(turtle, 39, 5, 30)
 
 #The Turtle Object should hold within it all the pathing (The graph of the tree). 
 #
