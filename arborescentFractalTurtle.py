@@ -1,5 +1,5 @@
 import turtle
-MIN_BRANCH_LENGTH = 1
+MIN_BRANCH_LENGTH = .25
 
 
 #Recrusive drawing function. Does most of the work. 
@@ -49,8 +49,11 @@ turtle.tracer(0,0)
 #Turtle is Down and Drawing
 turtle.pendown()
 
-#Inital Function Call
-construct_tree(turtle, 50, 5, 15)
+#Inital Function Call - Fractal Itself
+
+for i in range(4):
+    turtle.setheading(90 * (90+i))
+    construct_tree(turtle, 63, 2, 17)
 
 #The Turtle Object should hold within it all the pathing (The graph of the tree). 
 #
