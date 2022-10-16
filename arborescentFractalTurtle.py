@@ -53,7 +53,7 @@ turtle.pendown()
 
 #Larger Macro Fractal
 for i in range(4):
-    turtle.setheading(90 * (90+i))
+    turtle.setheading(90 + (90*i))
     if i % 2 != 0:
             turtle.color('orange')
     else:
@@ -64,10 +64,10 @@ for i in range(4):
 
 #Wonkie Fractal
 for j in range(4):
-    turtle.setheading(0 + (j*90))
+    turtle.setheading(0 + (j*45))
     #Wonkie Fractal
     for i in range(4):
-        turtle.setheading((45+j) + (45+i))
+        turtle.setheading((90*j) + (45+i))
         if i % 2 != 0:
                 turtle.color('orange')
         else:
