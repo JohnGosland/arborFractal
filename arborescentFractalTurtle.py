@@ -49,8 +49,46 @@ turtle.tracer(0,0)
 #Turtle is Down and Drawing
 turtle.pendown()
 
-#Inital Function Call
-construct_tree(turtle, 50, 5, 15)
+#Inital Fractal
+for j in range(5):
+    if j % 2 != 0:
+        turtle.pencolor('orange')
+    else:
+        turtle.pencolor('purple')
+    
+    for i in range(4):
+        turtle.setheading((90 + (5*j)) + (90 * i))
+        construct_tree(turtle, 62, 4.9, 25)
+
+for j in range(5):
+    if j % 2 == 0:
+        turtle.pencolor('orange')
+    else:
+        turtle.pencolor('purple')
+    
+    for i in range(4):
+        turtle.setheading((90 - (5*j)) + (90 * i))
+        construct_tree(turtle, 62, 4.9, 25)
+
+#Secondary Fractal
+for i in range(4):
+    for j in range(5):
+        if j % 2 != 0:
+            turtle.pencolor('orange')
+        else:
+            turtle.pencolor('purple')
+        turtle.setheading((45 + j) + (90 * i))
+        construct_tree(turtle, 30, 5, 78)
+
+#Tertiary Fractal
+for i in range(4):
+    for j in range(5):
+        if j % 2 != 0:
+            turtle.pencolor('orange')
+        else:
+            turtle.pencolor('purple')
+        turtle.setheading((45 - j) + (90 * i))
+        construct_tree(turtle, 30, 5, 78)
 
 #The Turtle Object should hold within it all the pathing (The graph of the tree). 
 #
